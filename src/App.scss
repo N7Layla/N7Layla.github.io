@@ -107,7 +107,7 @@ input, textarea {
   border: 0px;
   border-bottom: 2px solid var(--accent-light);
   margin-bottom: 4px;
-  font-family: verdana;
+  font-family: verdana, sans-serif;
   background: transparent;
   color: var(--text-primary);
 }
@@ -123,7 +123,8 @@ button {
   color: var(--text-primary);
   padding: 4px;
   margin: 2px;
-  font-family: verdana;
+  font-family: verdana, sans-serif;
+  cursor: pointer;
 }
 
 .portrait {
@@ -178,7 +179,7 @@ button {
         width: min-content;
         font-size: 50px;
         line-height: 50px;
-        font-family: 'Lemon Yellow Sun';
+        font-family: 'Lemon Yellow Sun', Verdana, sans-serif;
         letter-spacing: 1px;
     }
 
@@ -191,7 +192,7 @@ button {
         margin: 0;
         font-size: 20px;
         line-height: 20px;
-        font-family: 'Lola Sans';
+        font-family: 'Lola Sans', Verdana, sans-serif;
         text-transform: uppercase;
         display: flex;
         justify-content: space-around;
@@ -244,7 +245,7 @@ button {
     }
 
     .text-content {
-        font-family: verdana;
+        font-family: verdana, sans-serif;
         padding: 6px;
         border: 2px solid var(--accent-light);
         box-shadow: 2px 2px 0px var(--accent-light);

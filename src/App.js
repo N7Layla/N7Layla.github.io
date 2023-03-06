@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route,  Outlet, NavLink } from 'react-router-dom
 import './App.scss';
 import useLocalStorage from 'use-local-storage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faX } from '@fortawesome/free-solid-svg-icons';
 import { faTwitterSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import About from "./components/about";
 import Projects from "./components/projects";
@@ -27,9 +27,12 @@ function App() {
     setTheme(newTheme);
   }
 
-  // const noAnimation = () => {
-    
-  // }
+  const noAnimation = () => {   
+    const animations = document.querySelectorAll('a');
+    animations.forEach(animation => {
+            animation.style.animationPlayState = 'paused';
+        })
+  }
   
   return (
 <BrowserRouter>  
@@ -53,8 +56,8 @@ function App() {
         ? <button onClick={switchTheme}><FontAwesomeIcon icon={faMoon} /> Dark Mode</button>
         : <button onClick={switchTheme}><FontAwesomeIcon icon={faSun} /> Light Mode</button>
       }
-      {/* <button onClick={noAnimation}><FontAwesomeIcon icon={faX} /> No Animation</button> 
-      <button><FontAwesomeIcon icon={faFont} /> Plain Fonts</button> */}
+       <button onClick={noAnimation}><FontAwesomeIcon icon={faX} /> Pause Animation</button> 
+      {/*<button><FontAwesomeIcon icon={faFont} /> Plain Fonts</button> */}
       </div>
           </header>
           
@@ -62,29 +65,27 @@ function App() {
           <NavLink 
           to="about"
           className={({ isActive }) =>
-              isActive ? activeStyle : undefined}>                
+              isActive ? activeStyle : ""}>                
                 about</NavLink> 
           <NavLink 
           to="experience"
           className={({ isActive }) =>
-            isActive ? activeStyle : undefined}>
-              {/* <img className="sparkles" src={sparkle} /> */}
+            isActive ? activeStyle : ""}>
               experience</NavLink> 
           <NavLink 
           to="projects"
           className={({ isActive }) =>
-          isActive ? activeStyle : undefined}>
-            {/* <img className="sparkles" src={sparkle} /> */}
+          isActive ? activeStyle : ""}>
             projects</NavLink>
           <NavLink 
           to="contact"
           className={({ isActive }) =>
-          isActive ? activeStyle : undefined}>
+          isActive ? activeStyle : ""}>
             contact</NavLink> 
           <NavLink 
           to="/"
           className={({ isActive }) =>
-          isActive ? activeStyle : undefined}>
+          isActive ? activeStyle : ""}>
             home</NavLink></nav>
         <Routes>
         <Route path="/" element={<Home />} />
