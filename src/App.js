@@ -4,6 +4,7 @@ import './App.scss';
 import useLocalStorage from 'use-local-storage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faTwitterSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import About from "./components/about";
 import Projects from "./components/projects";
 import Experience  from './components/experience';
@@ -36,7 +37,14 @@ function App() {
       <div className="background">
         </div>
         <div className="container">
+        <aside>
         <img src={portrait} className="portrait" alt="Portrait illustration" />
+        <div className="accounts">
+          <a href="https://github.com/N7Layla" target="_blank" rel="noreferrer"><FontAwesomeIcon className="icon" icon={faGithubSquare} /></a>
+          <a href="https://www.linkedin.com/in/laylahedges/" target="_blank" rel="noreferrer"><FontAwesomeIcon className="icon" icon={faLinkedin} /></a>
+          <a href="https://twitter.com/laylawrote" target="_blank" rel="noreferrer"><FontAwesomeIcon className="icon" icon={faTwitterSquare} /></a>
+        </div>
+        </aside>
         <section className="content-box">
           <header>
           <h1>laylawrote</h1>

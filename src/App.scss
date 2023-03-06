@@ -134,6 +134,30 @@ button {
     box-shadow: 2px 2px 0px var(--accent-light);
 }
 
+.accounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    margin: 8px;
+    font-size: 20px;
+    text-decoration: none;
+    background: none;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    line-height: 16px;
+    padding: 4px;
+    border: 1px solid var(--background);
+    transition: 1s all ease-in-out;
+  }
+
+  a:hover {
+    border: 1px solid var(--accent-light);
+    transition: 1s all ease-in-out;
+  }
+}
+
 .content-box {
     margin: 2vmin;
     width: 60vmin;
