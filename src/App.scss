@@ -284,6 +284,19 @@ footer {
   }
 }
 
+.project-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  span {
+
+    h2 {
+      display: inline;
+    }
+  }
+}
+
 .scooby-shrine {
   display: flex;
   justify-content: center;

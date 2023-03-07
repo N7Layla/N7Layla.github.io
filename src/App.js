@@ -7,7 +7,6 @@ import { faMoon, faSun, faX } from '@fortawesome/free-solid-svg-icons';
 import { faTwitterSquare, faGithubSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import About from "./components/about";
 import Projects from "./components/projects";
-import Experience  from './components/experience';
 import Contact from './components/contact';
 import Thanks from './components/thanks';
 import portrait from "./images/portrait1.png";
@@ -68,11 +67,6 @@ function App() {
               isActive ? activeStyle : ""}>                
                 about</NavLink> 
           <NavLink 
-          to="experience"
-          className={({ isActive }) =>
-            isActive ? activeStyle : ""}>
-              experience</NavLink> 
-          <NavLink 
           to="projects"
           className={({ isActive }) =>
           isActive ? activeStyle : ""}>
@@ -91,7 +85,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="projects" element={<Projects />} />
-        <Route path="experience" element={<Experience />} />
         <Route path="contact" element={<Contact />} />
         <Route path="thanks" element={<Thanks />} />
       </Routes>
