@@ -288,12 +288,19 @@ footer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 
   span {
+    margin: 1em;
 
     h2 {
       display: inline;
     }
+  }
+
+  .project-shot {
+    width: 50%;
+    margin: 1em;
   }
 }
 
