@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.65f01da7.css",
-    "main.js": "/static/js/main.4dcdb421.js",
+    "main.css": "/static/css/main.f2e42826.css",
+    "main.js": "/static/js/main.83b81af4.js",
     "static/js/787.a5fa54f9.chunk.js": "/static/js/787.a5fa54f9.chunk.js",
     "static/media/LolaSans-Bold.otf": "/static/media/LolaSans-Bold.0a7dd792c17607462ed4.otf",
+    "static/media/artmood.PNG": "/static/media/artmood.e1488bd844228a431d24.PNG",
     "static/media/portrait1.png": "/static/media/portrait1.6571675b4ab2867fa203.png",
     "static/media/scoobs.jpg": "/static/media/scoobs.3383322025472c06c2ec.jpg",
     "static/media/IMG_2126.jpg": "/static/media/IMG_2126.553e0ebb2b5dc7d7c67b.jpg",
@@ -13,12 +14,12 @@
     "static/media/heart.png": "/static/media/heart.9cf221553cf929fe38bf.png",
     "static/media/wave.svg": "/static/media/wave.0a65d5fda164d7218439.svg",
     "index.html": "/index.html",
-    "main.65f01da7.css.map": "/static/css/main.65f01da7.css.map",
-    "main.4dcdb421.js.map": "/static/js/main.4dcdb421.js.map",
+    "main.f2e42826.css.map": "/static/css/main.f2e42826.css.map",
+    "main.83b81af4.js.map": "/static/js/main.83b81af4.js.map",
     "787.a5fa54f9.chunk.js.map": "/static/js/787.a5fa54f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.65f01da7.css",
-    "static/js/main.4dcdb421.js"
+    "static/css/main.f2e42826.css",
+    "static/js/main.83b81af4.js"
   ]
 }
