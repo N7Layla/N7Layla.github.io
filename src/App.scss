@@ -66,7 +66,7 @@ a:hover {
     height: 100%;
     background: var(--background);
     z-index: -1;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 main {
@@ -77,18 +77,19 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 10vmin;
-  overflow: hidden;
+  // margin-top: 10vmin;
+  // overflow: hidden;
+  overflow: auto;
 }
 
 .container {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     background: var(--background);
     color: var(--text-primary);
-    margin-top: 10vmin;
 }
 
 ul {
@@ -116,6 +117,27 @@ input::placeholder, textarea::placeholder {
   color: var(--text-primary);
 }
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1vmin;
+  width: 100%;
+
+  button {
+      font-family: verdana;
+  }
+
+  h1 {
+    margin: 0;
+    width: min-content;
+    font-size: 50px;
+    line-height: 50px;
+    font-family: 'Lemon Yellow Sun', Verdana, sans-serif;
+    letter-spacing: 1px;
+}
+}
+
 button {
   background: var(--background);
   border: 2px solid var(--accent-light);
@@ -127,12 +149,126 @@ button {
   cursor: pointer;
 }
 
-.portrait {
-    height: 150px;
-    background: var(--accent-light);
-    outline: 1px solid var(--background);
-    outline-offset: -4px;
-    box-shadow: 2px 2px 0px var(--accent-light);
+.desk {
+  width: 100vmin;
+  border: 3px solid var(--accent-light);
+}
+
+.content-box {
+    width: 100vmin;
+    border-width: 3px;
+    border-style: solid;
+    border-image: 
+      linear-gradient(
+        to bottom, 
+        var(--accent-light), 
+        var(--background)
+      ) 1 70%;
+    margin-top: -10px;
+
+  nav {
+      background: var(--accent-light);
+      outline: 1px solid white;
+      outline-offset: -4px;
+      padding: 8px;
+      display: block;
+      margin: 0;
+      font-size: 20px;
+      line-height: 20px;
+      font-family: 'Lola Sans', Verdana, sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-around;
+      // box-shadow: 2px 2px 0px var(--accent-light);
+
+      a {
+          text-decoration: none;
+          color: var(--text-primary);
+          transition: all 2s ease-in-out;
+      }
+
+      .mark {
+        position: relative;
+        background: none;
+        animation: none;
+        transition: all 2s ease-in-out;
+      }
+
+      .mark:after {
+        border: .25em solid #cc96ff;
+        border-top: none;
+        border-radius: 1.5em 1em 2em 1.5em;
+        bottom: -.1em;
+        content: '';
+        left: -.3em;
+        position: absolute;
+        right: -.3em;
+        top: -.1em;
+        transition: all 2s ease-in-out;
+      }
+
+      .mark:before {
+        border-top: .25em solid #cc96ff;
+        border-radius: .5em;
+        content: '';
+        height: 1em;
+        left: 0;
+        position: absolute;
+        top: -.3em;
+        transform: rotate(-10deg);
+        width: 2em;
+        transition: all 2s ease-in-out;
+      }
+
+      .active-link {
+          transition: all 4s ease-in-out;
+          background: none;
+          animation: none;
+      }
+  }
+
+}
+
+.text-content {
+  font-family: verdana, sans-serif;
+  padding: 1vmin;
+  // border: 2px solid var(--accent-light);
+  // box-shadow: 2px 2px 0px var(--accent-light);
+  text-align: justify;
+}
+
+@-webkit-keyframes move {
+  from {
+      background-position: 2px 19px;
+    }
+    to {
+      background-position: 500px 19px;
+    }
+  }
+  
+  @keyframes move {
+  from {
+      background-position: 2px 19px;
+    }
+    to {
+      background-position: 500px 19px;
+    }
+  }
+  
+
+
+footer {
+  width: 100vmin;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--text-primary);
+  line-height: 20px;
+
+  a {
+    margin: 0px 4px;
+  }
 }
 
 .accounts {
@@ -159,149 +295,32 @@ button {
   }
 }
 
-.content-box {
-    margin: 2vmin;
-    width: 60vmin;
-
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 1vmin;
-
-        button {
-            font-family: verdana;
-        }
-    }
-    
-    h1 {
-        margin: 0;
-        width: min-content;
-        font-size: 50px;
-        line-height: 50px;
-        font-family: 'Lemon Yellow Sun', Verdana, sans-serif;
-        letter-spacing: 1px;
-    }
-
-    nav {
-        background: var(--accent-light);
-        outline: 1px solid white;
-        outline-offset: -4px;
-        padding: 8px;
-        display: block;
-        margin: 0;
-        font-size: 20px;
-        line-height: 20px;
-        font-family: 'Lola Sans', Verdana, sans-serif;
-        text-transform: uppercase;
-        display: flex;
-        justify-content: space-around;
-        box-shadow: 2px 2px 0px var(--accent-light);
-
-        a {
-            text-decoration: none;
-            color: var(--text-primary);
-            transition: all 2s ease-in-out;
-        }
-
-        .mark {
-          position: relative;
-          background: none;
-          animation: none;
-          transition: all 2s ease-in-out;
-        }
-
-        .mark:after {
-          border: .25em solid #cc96ff;
-          border-top: none;
-          border-radius: 1.5em 1em 2em 1.5em;
-          bottom: -.1em;
-          content: '';
-          left: -.3em;
-          position: absolute;
-          right: -.3em;
-          top: -.1em;
-          transition: all 2s ease-in-out;
-        }
-
-        .mark:before {
-          border-top: .25em solid #cc96ff;
-          border-radius: .5em;
-          content: '';
-          height: 1em;
-          left: 0;
-          position: absolute;
-          top: -.3em;
-          transform: rotate(-10deg);
-          width: 2em;
-          transition: all 2s ease-in-out;
-        }
-
-        .active-link {
-            transition: all 4s ease-in-out;
-            background: none;
-            animation: none;
-        }
-    }
-
-    .text-content {
-        font-family: verdana, sans-serif;
-        padding: 6px;
-        border: 2px solid var(--accent-light);
-        box-shadow: 2px 2px 0px var(--accent-light);
-        text-align: justify;
-    }
-}
-
-
-@-webkit-keyframes move {
-  from {
-      background-position: 2px 19px;
-    }
-    to {
-      background-position: 500px 19px;
-    }
-  }
-  
-  @keyframes move {
-  from {
-      background-position: 2px 19px;
-    }
-    to {
-      background-position: 500px 19px;
-    }
-  }
-  
-
-
-footer {
-  font-size: 11px;
-  display: flex;
-  justify-content: flex-end;
-
-  a {
-    margin: 0px 4px;
-  }
-}
-
 .project-section {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   span {
     margin: 1em;
+    width: 40%;
 
     h2 {
       display: inline;
+      clear: left;
     }
   }
 
   .project-shot {
-    width: 50%;
+    width: 45%;
     margin: 1em;
+    border: 1px solid var(--accent-light);
+    border-radius: 20px;
   }
+}
+
+.project-section:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .scooby-shrine {
@@ -335,6 +354,13 @@ footer {
   :root, body, .background {
     overflow: auto;
   }
+  .container {
+    width: 100vmin;
+  }
+
+  .desk {
+    width: 98vmin;
+  }
   main {
     align-items: flex-start;
     margin-top: 1vmin;
@@ -346,11 +372,22 @@ footer {
     flex-wrap: wrap;
 
     a {
-      font-size: 25px;
-      line-height: 26px;
+      font-size: 15px;
+      line-height: 20px;
     }
   }
   .content-box {
     width: 100%;
+    border: 0px;
+  }
+
+  .project-section {
+    span {
+      width: 100%;
+    }
+
+    .project-shot {
+      width: 80%;
+    }
   }
 }
