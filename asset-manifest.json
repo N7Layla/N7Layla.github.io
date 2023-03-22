@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.c5a71bf9.css",
-    "main.js": "/static/js/main.56272b40.js",
+    "main.js": "/static/js/main.dcb644ed.js",
     "static/js/787.a5fa54f9.chunk.js": "/static/js/787.a5fa54f9.chunk.js",
-    "static/media/desk_commission-2_1.gif": "/static/media/desk_commission-2_1.bc9c25c8fdee64ca2a2e.gif",
-    "static/media/desk_commission_illustration.png": "/static/media/desk_commission_illustration.f7a97697cdb6bf490793.png",
+    "static/media/desk_commission 2_1.mov": "/static/media/desk_commission 2_1.ac73b6ffba651bdcf93e.mov",
     "static/media/tvtracker.PNG": "/static/media/tvtracker.cebe78606b3655bec469.PNG",
     "static/media/LolaSans-Bold.otf": "/static/media/LolaSans-Bold.0a7dd792c17607462ed4.otf",
     "static/media/artmood.PNG": "/static/media/artmood.e1488bd844228a431d24.PNG",
@@ -17,11 +16,11 @@
     "static/media/wave.svg": "/static/media/wave.0a65d5fda164d7218439.svg",
     "index.html": "/index.html",
     "main.c5a71bf9.css.map": "/static/css/main.c5a71bf9.css.map",
-    "main.56272b40.js.map": "/static/js/main.56272b40.js.map",
+    "main.dcb644ed.js.map": "/static/js/main.dcb644ed.js.map",
     "787.a5fa54f9.chunk.js.map": "/static/js/787.a5fa54f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5a71bf9.css",
-    "static/js/main.56272b40.js"
+    "static/js/main.dcb644ed.js"
   ]
 }
