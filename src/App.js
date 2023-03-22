@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { BrowserRouter, Routes, Route,  Outlet, NavLink } from 'react-router-dom';
 import './App.scss';
 import useLocalStorage from 'use-local-storage';
@@ -10,8 +10,7 @@ import Projects from "./components/projects";
 import Contact from './components/contact';
 import Thanks from './components/thanks';
 import Blog from './components/blog';
-import desk from "./images/desk_commission-2_1.gif";
-import deskStill from './images/desk_commission_illustration.png';
+import deskVid from  './images/desk_commission 2_1.mov';
 
 function Home(props) {
   return <div className="text-content">hello and welcome! i'm a full stack developer, accessibility advocate and ux enthusiast.</div>
@@ -28,6 +27,8 @@ function App() {
     setTheme(newTheme);
   }
 
+  const vidRef = useRef(null);
+
   const [animateImg, setAnimateImg] = useState(true); 
 
   const areaListener = new AbortController();
@@ -40,21 +41,21 @@ function App() {
     ev.target.style.animationPlayState = 'paused';
   }
 
-  var bannerImage = animateImg ? desk : deskStill;
-  console.log("->", animateImg);
   const noAnimation = () => {   
     const animations = document.querySelectorAll('a');
-    console.log("???", animateImg);
+
     animations.forEach(animation => {
             if (animateImg === false) {
               animation.addEventListener("mouseover", animate, { signal: areaListener.signal });
               animation.addEventListener("mouseleave", unanimate, { signal: areaListener.signal });
               setAnimateImg(true);
+              vidRef.current.play();
             } else {
               animation.style.animationPlayState = 'paused';
               animation.addEventListener("mouseover", unanimate);
               areaListener.abort();              
               setAnimateImg(false);
+              vidRef.current.pause();
             }           
         })
       
@@ -76,7 +77,9 @@ function App() {
       {animateImg ? <button onClick={noAnimation}><FontAwesomeIcon icon={faPause} /> Pause Animation</button>  : <button onClick={noAnimation}><FontAwesomeIcon icon={faPlay} /> Play Animation</button> }
       </div>
           </header>
-          <img src={bannerImage} alt="Laylawrote Desk Scene Illustration" className="desk" />
+              <video ref={vidRef} autoPlay muted loop className="desk" alt="Video animation of a desk scene featuring a coding computer screen, with a cat sleeping next to the monitor">
+      <source src={deskVid} type="video/mp4"/>
+     </video>
         <section className="content-box">
          
           
